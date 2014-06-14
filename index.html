@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>Excel Sheet</title>
+<style>
+table {background-color: transparent; }
+table { width: 100%; border: 1px solid #d5d5d5; }
+table th, table td { padding: 4px; line-height: 20px; vertical-align: middle;}
+table th { font-weight: bold; text-align: center; color:#3c85be;}
+input:focus{ color: #b94a48; border-color: #ee5f5b; }
+input[type="button"] {
+font-size: 11px; 
+  text-align: center; 
+  font-weight: bold; 
+  display: inline-block;  
+  padding: 8px 12px 7px; 
+  margin:10px 5px;
+  line-height: 13px; 
+  border: 1px solid #3c85ba; 
+  color: #fff; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background: #3c85be;
+}
+input[type="text"] {
+width:100px;
+}
+input[type="button"]:hover { 
+    opacity: 0.7; 
+    filter: alpha(opacity=7); 
+    color: #fff; }
+.clear {
+clear:both;
+}	
+</style>
+</head>
+<body>
+	<table id="dynamictable">
+	<tr id="heading"></tr>
+	</table>
+	<div class="clear"></div>
+<div>
+<input type="button" onclick="addNewRow()" value="Add New Row" />
+<input type="button" onclick="addNewColumn()" value="Add New Column" />
+<input type="button" onclick="delRow()" value="Delete Last Row" />
+<input type="button" onclick="delColumn()" value="Delete Last Column" />
+</div>
+<p>Please Click On Column Name To Sort That Particular Column</p>
+
+<script type="text/javascript" src="work.js"></script>
+</body>
+</html>
