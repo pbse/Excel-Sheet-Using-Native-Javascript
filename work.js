@@ -11,7 +11,6 @@
 	var table = {   
 		rowcount    :0,
 		columncount :0,
-		rownos		:0,
 		addNewRow : function () {
 			this.rowcount++;
 		},
@@ -23,12 +22,6 @@
 		},
 		delNewColumn : function() {
 			this.columncount--;
-		},
-		addRowNos : function() {
-			this.rownos++;
-		},
-		delRowNos : function() {
-			this.rownos--;
 		},
 		drawTable : function(a,b) {
 			if(typeof a==='undefined') this.rowcount = 10;
@@ -74,8 +67,7 @@
 		var cell = document.createElement('td');
 			cell.setAttribute('id','htdid-' + i);
 		document.getElementById('id-'+i).appendChild(cell);
-		document.getElementById('htdid-'+i).appendChild(document.createTextNode(table.rownos));
-		table.addRowNos();
+		document.getElementById('htdid-'+i).appendChild(document.createTextNode(i));
 		for (var j = 0; j < table.columncount; j++) {
 			var cell = document.createElement('td');
 				cell.setAttribute('id','id-'+i+'-'+j);
@@ -140,8 +132,7 @@
 
 	var delRow = function() {
 		i = table.rowcount - 1;
-		document.getElementById('id-'+i).remove();
-		table.delRowNos();	
+		document.getElementById('id-'+i).remove();	
 		table.delNewRow();
 	};
 	
